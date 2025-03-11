@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+  </head>
+  <body>
+    <h1 class='head'>welcome to keyword extractor</h1>
+    <div class="upload">
+        <!-- From Uiverse.io by 3bdel3ziz-T -->
+        <div class="container">
+            <div class="folder">
+                <div class="front-side">
+                    <div class="tip"></div>
+                    <div class="cover"></div>
+                </div>
+                <div class="back-side cover"></div>
+            </div>
+            <form method="post" enctype="multipart/form-data" id="uploadForm">
+                {% csrf_token %}
+                <label class="custom-file-upload">
+                    <input class="title" type="file" name="file" onchange="document.getElementById('uploadForm').submit();" />Choose txt file
+                </label>
+            </form>
+        </div>
+    </div>
+    {% if keywords %}
+    <div class="keywords">
+        <h2>Extracted Keywords:</h2>
+        <ul>
+            {% for keyword, score in keywords.items %}
+            <li>{{ keyword }}: {{ score }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+  </body>
+</html>
