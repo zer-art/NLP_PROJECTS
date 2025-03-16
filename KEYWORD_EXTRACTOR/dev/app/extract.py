@@ -36,7 +36,6 @@ def sort_coo(coo_matrix):
 
 def extract_topn_from_vector(feature_names, sorted_items, topn=10):
     sorted_items = sorted_items[:topn]
-
     score_vals = []
     feature_vals = []
     for idx, score in sorted_items:
