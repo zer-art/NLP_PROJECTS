@@ -1,0 +1,17 @@
+:root{   /** Theme surface colors */
+--clr-surface-a0: #0a0617;
+--clr-surface-a10: #22212c;
+--clr-surface-a20: #3a3842;
+--clr-surface-a30: #53515b;
+--clr-surface-a40: #6d6b74;
+--clr-surface-a50: #88878e;
+
+/** Theme primary colors */
+--clr-primary-a0: #52a282;
+--clr-primary-a10: #67ac8f;
+--clr-primary-a20: #7ab79c;
+--clr-primary-a30: #8ec1aa;
+--clr-primary-a40: #a1cbb8;
+--clr-primary-a50: #b3d6c6;
+
+}
